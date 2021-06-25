@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                
+            }
+        
+            #block{
+                background-color: antiquewhite;
+                height: 15px;
+                width: 15px;    
+            }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 240px;
+                height:240px;
+            }
+            .cell {
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+            }
+           
+            
+        </style>
+    </head>
+            <body>
+                
+                <button onclick="clonerOfDivs()">
+                    Try it?
+                </button>
+                
+                <div id= "container" class="container">
+                    <!-- for right now, going to try using DOM to generate all of the divs that we would want for this project, 
+                    and we will attempt this via nested for-loops-->
+            
+                        <script>
+                            //in that, I'm going to try cloning the block div as described above
+                            //instead we decided that just generating the divs in a pair of for-loops would be what created the 16x16 we wanted
+                            //also adjusted the block size to 15px instead of 10px
+                            
+                            function clonerOfDivs(){
+                                const container = document.querySelector("#container");
+                                    for(let i =0; i< 16; i++){
+                                        for(let j=0; j < 16; j++){
+                                            let obj = document.createElement("DIV");
+                                            obj.id="block";
+                                            container.appendChild(obj);
+                                        }
+                                    }
+
+                            }
+                        </script>
+                    </div>
+
+                </div>
+
+
+
+            </body>
+
+
+
+</html>
