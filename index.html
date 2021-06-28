@@ -28,11 +28,8 @@
         </style>
     </head>
             <body>
-                
-                <button onclick="clonerOfDivs()">
-                    Try it?
-                </button>
-                
+            
+              
                 <div id= "container" class="container">
                     <!-- for right now, going to try using DOM to generate all of the divs that we would want for this project, 
                     and we will attempt this via nested for-loops-->
@@ -53,12 +50,41 @@
                                     }
 
                             }
+
+                            function clearPage(){
+                                let test = document.getElementById("container");
+                                test.parentNode.removeChild("block");
+                                clonerOfDivs();
+
+                            }
+
+                            let test = document.getElementById("container");
+                            
+                            test.addEventListener("mouseover", function(event) {
+                                event.target.style.backgroundColor = "orange";
+                            
+                            }, false);
+
+                           
+
+
+
+
+
+                            window.onload = clonerOfDivs;
                         </script>
-                    </div>
+                
+              
+
+
 
                 </div>
 
+                </div>
 
+                <button type ="button" onclick="clearPage()">
+                    Clear Page?
+                 </button>
 
             </body>
 
