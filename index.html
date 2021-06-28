@@ -52,10 +52,13 @@
                             }
 
                             function clearPage(){
-                                let test = document.getElementById("container");
-                                test.parentNode.removeChild("block");
-                                clonerOfDivs();
-
+                                let div = document.getElementById("container");
+                                let nodelist = div.getElementsByTagName("DIV").length;
+                                for(let i =0; i < nodelist ; i++){
+                                    let node = div.getElementsByTagName("DIV")[i];
+                                    node.style.backgroundColor = "antiquewhite";
+                                    
+                                }
                             }
 
                             let test = document.getElementById("container");
